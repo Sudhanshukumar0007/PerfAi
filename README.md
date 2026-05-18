@@ -14,7 +14,7 @@ PerfAI is designed with a premium, information-dense aesthetic inspired by finan
 - **Frontend**: React (Vite), React Router v6, Axios, Lucide React (Iconography), React Hot Toast
 - **Backend**: Node.js, Express.js, MongoDB (Atlas), Mongoose
 - **Security**: JWT Authentication, Route Protection, Scoped Data Access (Multi-Tenancy)
-- **AI Integration**: OpenRouter API (utilizing Mistral/Gemma models) for intelligent performance ranking and personalized feedback.
+- **AI Integration**: OpenRouter API (utilizing Google Gemini models) for intelligent performance ranking and personalized feedback.
 
 ---
 
@@ -109,7 +109,7 @@ PerfAI is fully prepared for deployment on [Render](https://render.com/).
 ## API Documentation
 
 ### Authentication (`/api/auth`)
-- `POST /register` - Register a new user account
+- `POST /signup` - Register a new user account
 - `POST /login` - Login to receive a JWT access token
 
 ### Employee Management (`/api/employees`) - *Requires Bearer Token*
