@@ -1,0 +1,131 @@
+:root {
+  --bg: #F7F5F0;
+  --bg-secondary: #EFEDE8;
+  --surface: #FFFFFF;
+  --surface2: #F0EEE9;
+  --border: #E0DDD6;
+  --text: #1A1814;
+  --text-muted: #8C8880;
+  --text-subtle: #B8B4AC;
+  --accent: #C8873A;
+  --accent-dim: rgba(200,135,58,0.10);
+  --accent-hover: #A86C28;
+  --green: #2D7A4F;
+  --red: #C0392B;
+  --yellow: #B8860B;
+  --shadow: 0 1px 3px rgba(26,24,20,0.08), 0 4px 12px rgba(26,24,20,0.04);
+  --shadow-lg: 0 8px 32px rgba(26,24,20,0.12);
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #111210;
+  --bg-secondary: #191817;
+  --surface: #1E1D1B;
+  --surface2: #252320;
+  --border: rgba(255,255,255,0.08);
+  --text: #F0EDE8;
+  --text-muted: #7A7870;
+  --text-subtle: #4A4844;
+  --accent: #D4924A;
+  --accent-dim: rgba(212,146,74,0.12);
+  --accent-hover: #E8A055;
+  --green: #4CAF82;
+  --red: #E05545;
+  --yellow: #D4A82A;
+  --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-body);
+  transition: all 150ms ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Base structural layout classes */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 220px;
+  padding: 2.5rem 3rem;
+  max-width: 1320px; /* 1100 + paddings */
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.skeleton {
+  background: var(--border);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Overriding Toast styling for theme */
+.go3958317564 {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
